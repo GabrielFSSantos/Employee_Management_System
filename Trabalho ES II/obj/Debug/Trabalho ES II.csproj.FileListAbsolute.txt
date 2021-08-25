@@ -1,0 +1,25 @@
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\Trabalho ES II.exe.config
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\Trabalho ES II.exe
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\Trabalho ES II.pdb
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.dll
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\System.Data.SQLite.dll
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.xml
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\System.Data.SQLite.xml
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.csprojAssemblyReference.cache
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form1.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form2.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form3.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form4.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form5.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form6.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form7.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Properties.Resources.resources
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.csproj.GenerateResource.cache
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.csproj.CopyComplete
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.exe
+C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.pdb
