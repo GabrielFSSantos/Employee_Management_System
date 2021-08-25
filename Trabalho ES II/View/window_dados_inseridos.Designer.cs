@@ -68,7 +68,6 @@ namespace Trabalho_ESII
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form5";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -9,7 +9,6 @@ C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.xml
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\bin\Debug\System.Data.SQLite.xml
-C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho ES II.csprojAssemblyReference.cache
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form1.resources
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form2.resources
 C:\Users\lucas\Source\Repos\Employee_Management_System\Trabalho ES II\obj\Debug\Trabalho_ESII.Form3.resources

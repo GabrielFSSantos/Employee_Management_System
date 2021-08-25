@@ -31,14 +31,14 @@ namespace Trabalho_ESII
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,14 +51,6 @@ namespace Trabalho_ESII
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Usuário";
-            // 
-            // form1BindingSource
-            // 
-            this.form1BindingSource.DataSource = typeof(Trabalho_ESII.Form1);
-            // 
-            // dataBindingSource
-            // 
-            this.dataBindingSource.DataSource = typeof(Trabalho_ESII.Code.Data);
             // 
             // label3
             // 
@@ -142,11 +134,19 @@ namespace Trabalho_ESII
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(Trabalho_ESII.Form1);
+            // 
+            // dataBindingSource
+            // 
+            this.dataBindingSource.DataSource = typeof(Trabalho_ESII.Code.Data);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(12)))), ((int)(((byte)(65)))));
+            this.BackColor = System.Drawing.Color.Tomato;
             this.ClientSize = new System.Drawing.Size(752, 601);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

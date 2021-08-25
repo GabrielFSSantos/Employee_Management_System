@@ -123,7 +123,7 @@ namespace Trabalho_ESII.Code
             {
                 throw ex;
             }
-        } //Restrição #1
+        }
 
         public void insertMatricula(int idEmpregado, int idTurma)
         {

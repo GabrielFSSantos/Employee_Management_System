@@ -51,8 +51,6 @@ INSERT INTO GESTOR(códigog,nome,departamento,cargo)
 VALUES (2,"John","DECSI","Coordenador");
 INSERT INTO GESTOR(códigog,nome,departamento,cargo)
 VALUES (3,"Nicole","DECSI","Administrador");
-INSERT INTO GESTOR(códigog,nome,departamento,cargo)
-VALUES (4,"Daniela","DECSI","Administrador");
 INSERT INTO EMPREGADO(códigoe,nome,endereço,cargo,códigog)
 VALUES (1,"João","Rua das flores, 0","Professor",1);
 INSERT INTO EMPREGADO(códigoe,nome,endereço,cargo,códigog)
