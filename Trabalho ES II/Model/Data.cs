@@ -12,6 +12,7 @@ namespace Trabalho_ESII.Code
         private string installLocation;
         private static SQLiteConnection connection;
 
+        // Conexão e SQL Inicial
         public Data()
         {
             installLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -41,6 +42,25 @@ namespace Trabalho_ESII.Code
                 throw ex;
             }
         }
+        public DataTable runSQL(string sql)
+        {
+            SQLiteDataAdapter da;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    da = new SQLiteDataAdapter(cmd.CommandText, connection);
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public DataTable getAll(string table)
         {
@@ -59,6 +79,26 @@ namespace Trabalho_ESII.Code
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        // Matricula
+        public void insertMatricula(int idEmpregado, int idTurma)
+        {
+            if (canMatricula(idTurma))
+            {
+                try
+                {
+                    using (var cmd = connection.CreateCommand())
+                    {
+                        cmd.CommandText = "INSERT INTO MATRÍCULA(códigoe,códigot) VALUES(" + idEmpregado + "," + idTurma + ");";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
         public DataTable getMatricula()
@@ -80,22 +120,6 @@ namespace Trabalho_ESII.Code
                 throw ex;
             }
         }
-        public void insertEmpregado(string nome, string endereco, string telefone, string cargo,int codigog)
-        {
-            try
-            {
-                using (var cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "INSERT INTO EMPREGADO(nome,endereço,telefone,cargo,códigog) VALUES(" + '"' + nome + '"' + "," + '"' + endereco + '"' + "," + '"' + telefone + '"' + "," + '"' + cargo + '"' + "," + codigog + ");";
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public bool canMatricula(int codigot)
         {
             string sql = "SELECT COUNT(*) FROM TURMA WHERE CódigoT = " + codigot;
@@ -125,36 +149,15 @@ namespace Trabalho_ESII.Code
             }
         }
 
-        public void insertMatricula(int idEmpregado, int idTurma)
+        // Turma
+        public void insertTurma(int codigot, int codigoc, int codigoi, int codigoh)
         {
-            if (canMatricula(idTurma))
-            {
-                try
-                {
-                    using (var cmd = connection.CreateCommand())
-                    {
-                        cmd.CommandText = "INSERT INTO MATRÍCULA(códigoe,códigot) VALUES(" + idEmpregado + "," + idTurma + ");";
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-        }
-        public DataTable runSQL(string sql)
-        {
-            SQLiteDataAdapter da;
-            DataTable dt = new DataTable();
             try
             {
                 using (var cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = sql;
-                    da = new SQLiteDataAdapter(cmd.CommandText, connection);
-                    da.Fill(dt);
-                    return dt;
+                    cmd.CommandText = "INSERT INTO TURMA(códigot,códigoc,códigoi,códigoh) VALUES(" + '"' + codigot + '"' + "," + '"' + codigoc + '"' + "," + '"' + codigoi + '"' + "," + '"' + codigoh + '"' + ");";
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -162,27 +165,6 @@ namespace Trabalho_ESII.Code
                 throw ex;
             }
         }
-
-        public DataTable deleteRow(int row, string table)
-        {
-            SQLiteDataAdapter da;
-            DataTable dt = new DataTable();
-            try
-            {
-                using (var cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "DELETE FROM EMPREGADO WHERE CódigoE=" + row;
-                    da = new SQLiteDataAdapter(cmd.CommandText, connection);
-                    da.Fill(dt);
-                    return dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public DataTable getTurma(int turma)
         {
             SQLiteDataAdapter da;
@@ -202,7 +184,42 @@ namespace Trabalho_ESII.Code
                 throw ex;
             }
         }
+        public void updateTurma(int codigot, int codigoc, int codigoi, int codigoh)
+        {
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE TURMA SET códigoc = "+ codigoc +", códigoi = "+ codigoi +", códigoh = "+ codigoh +" WHERE códigot = "+ codigot +" ;"
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable deleteTurma(int row, string table)
+        {
+            SQLiteDataAdapter da;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM TURMA WHERE CódigoT=" + row;
+                    da = new SQLiteDataAdapter(cmd.CommandText, connection);
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         
+        // Alunos
         public DataTable getAlunos(int turma)
         {
             SQLiteDataAdapter da;
@@ -223,6 +240,23 @@ namespace Trabalho_ESII.Code
             }
             
         }
+
+        // Empregados
+        public void insertEmpregado(string nome, string endereco, string telefone, string cargo, int codigog)
+        {
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO EMPREGADO(nome,endereço,telefone,cargo,códigog) VALUES(" + '"' + nome + '"' + "," + '"' + endereco + '"' + "," + '"' + telefone + '"' + "," + '"' + cargo + '"' + "," + codigog + ");";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public DataTable getEmpregado(string nome)
         {
             SQLiteDataAdapter da;
@@ -242,6 +276,40 @@ namespace Trabalho_ESII.Code
                 throw ex;
             }
 
+        }
+        public void updateEmpregado(string nome, string endereco, string telefone, string cargo, int codigog, string códigoe)
+        {
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE EMPREGADO SET nome = "+ nome +", endereço = "+ endereço +", telefone = "+ telefone +", cargo = "+ cargo +", códigog = "+ códigog +" WHERE códigoe = "+ códigoe +";"
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable deleteRow(int row, string table)
+        {
+            SQLiteDataAdapter da;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM EMPREGADO WHERE CódigoE=" + row;
+                    da = new SQLiteDataAdapter(cmd.CommandText, connection);
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
